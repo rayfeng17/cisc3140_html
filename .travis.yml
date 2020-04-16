@@ -1,1 +1,4 @@
 language: python
+
+deploy:
+  skip_cleanup: true
