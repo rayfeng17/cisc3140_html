@@ -3,4 +3,4 @@ python:
   - "3.8"
 cache: pip3
 script:
-  - python tests.py
+  - python html_api.py
