@@ -11,7 +11,7 @@ matrix:
         - pip3 install --upgrade pytest
         - pip3 install codecov         
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
-      deploy: t
+      deploy: true
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  
