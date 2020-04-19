@@ -14,12 +14,12 @@ matrix:
         - pip install
         script: 
         - pip test
-        -pip run build
+        - pip run build
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
       deploy:
   provider: pages
   skip_cleanup: true
-  github-token: $GITHUB_TOKEN  
+  github_token: $GITHUB_TOKEN  
   keep_history: true
   on:
     branch: master
