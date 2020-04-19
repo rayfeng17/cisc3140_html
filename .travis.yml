@@ -10,11 +10,6 @@ matrix:
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
         - pip3 install codecov         
-        install: 
-        - pip install
-        script: 
-        - pip test
-        - pip run build
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
       deploy:
   provider: pages
@@ -22,4 +17,4 @@ matrix:
   github_token: $GITHUB_TOKEN  
   keep_history: true
   on:
-    branch: master
+    branch: gh-pages
