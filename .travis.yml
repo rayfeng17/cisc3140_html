@@ -3,7 +3,7 @@ matrix:
     - name: "Python 3.8.2 on Windows"
       os: windows           # Windows 10
       language: shell       # 'language: python' is an error on Travis CI Windows
-      cache: yarn
+      cache: pip
       before_install:
         - choco install python --version 3.8.2
         - python --version
@@ -11,10 +11,10 @@ matrix:
         - pip3 install --upgrade pytest
         - pip3 install codecov         
         install: 
-        - yarn install
+        - pip install
         script: 
-        - yarn test
-        -yarn run build
+        - pip test
+        -pip run build
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
       deploy:
   provider: pages
