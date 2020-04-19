@@ -1,19 +1,15 @@
-matrix:
-  include:
-    - name: "Python 3.8.2 on Windows"
-      os: windows           # Windows 10
-      language: shell       # 'language: python' is an error on Travis CI Windows
-      before_install:
-        - choco install python --version 3.8.2
-        - python --version
-        - python -m pip install --upgrade pip
-        - pip3 install --upgrade pytest
-        - pip3 install codecov
-      env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
-      deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  
-  keep_history: true
-  on:
-    branch: master
+lanauge: node_js
+node_js: 
+- 11.6.0
+cache: yarn
+install:
+- yarn install
+script: 
+- yarn test
+- yarn run build 
+deply: 
+provider: pages
+skip-cleanup: true
+github_token: $GITHUB_TOKEN
+on: 
+branch: master
