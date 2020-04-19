@@ -2,8 +2,6 @@ matrix:
   include:
     - name: "Python 3.8.2 on Windows"
       os: windows           # Windows 10
-      script: 
-      - html_api.py
       language: shell       # 'language: python' is an error on Travis CI Windows
       before_install:
         - choco install python --version 3.8.2
