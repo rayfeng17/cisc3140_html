@@ -1,3 +1,4 @@
+      matrix:
       os: windows           # Windows 10
       language: shell       # 'language: python' is an error on Travis CI Windows
       before_install:
